@@ -52,6 +52,7 @@ class PanierTest {
         assertFalse(panier.estVide());
     }
 
+    //  Cas Invalides
     @Test 
     void quantiteNulleDoitLeverUneException() { 
         Panier panier = new Panier(); 
@@ -87,5 +88,50 @@ class PanierTest {
         Panier panier = new Panier();
         assertThrows(IllegalArgumentException.class, 
                 () -> panier.appliquerCodeReduction(null)); 
+    }
+
+    //  Cas Limites
+    @Test 
+    void articleOfferDoitEtreAccepteEtNePasCompterDansLeTotal() { 
+        Panier panier = new Panier(); 
+        Article articleGratuit = new Article("OFFERT-01", "Stylo offert", 0.0); 
+        panier.ajouterArticle(articleGratuit, 1); 
+        assertEquals(0.0, panier.calculerTotal(), 0.001); 
+    }
+
+    @Test
+    void quantiteUneDoitEtreAcceptee(){
+        Panier panier = new Panier();
+        Article article = new Article("Test", "un article", 9.99);
+        panier.ajouterArticle(article, 1);
+        assertEquals(9.99, panier.calculerTotal(),0.001);
+    }
+
+    @Test
+    void prixEleveDoitFonctionner(){
+        Panier panier = new Panier();
+        Article article = new Article("Test", "un article eleve", 999.99);
+        panier.ajouterArticle(article, 1);
+        assertEquals(999.99, panier.calculerTotal(),0.001);
+    }
+
+    @Test
+    void panierAvecUnSeulArticleDoitFonctionner(){
+        Panier panier = new Panier();
+        Article article = new Article("Test", "un article", 9.99);
+        panier.ajouterArticle(article, 1);
+        assertEquals(1, panier.nombreArticles());
+    }
+
+    @Test
+    void plusieursArticlesDifferentsDansPanier(){
+        Panier panier = new Panier();
+        Article article1 = new Article("Test", "un article", 3.99);
+        Article article2 = new Article("Test", "un autre article", 9.99);
+        Article article3 = new Article("Test", "et encore un autre article", 15.99);
+        panier.ajouterArticle(article1, 1);
+        panier.ajouterArticle(article2, 1);
+        panier.ajouterArticle(article3, 1);
+        assertEquals(3, panier.nombreArticles());
     }
 }
