@@ -28,5 +28,9 @@ public class Panier {
         if ("REDUC10".equals(codeReduction)) return sousTotal * 0.90; 
         if ("REDUC20".equals(codeReduction)) return sousTotal * 0.80; 
         return sousTotal; 
-    }
-}
+    } 
+ 
+    public int nombreArticles()  { return lignes.size(); } 
+    public boolean estVide()     { return lignes.isEmpty(); } 
+    public List<LigneCommande> getLignes() { return lignes; } 
+} 
