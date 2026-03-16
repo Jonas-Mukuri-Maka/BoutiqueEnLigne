@@ -1,5 +1,12 @@
 package boutique.service;
 
+import java.time.LocalDateTime;
+
+import boutique.exception.StockInsuffisantException;
+import boutique.modele.Commande;
+import boutique.modele.LigneCommande;
+import boutique.modele.Panier;
+
 public class ServiceCommande { 
     private final DepotStock depotStock; 
  
