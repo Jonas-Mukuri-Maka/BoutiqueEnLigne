@@ -1,4 +1,4 @@
-package boutique.modele;
+package fr.boutique.modele;
 
 import java.util.ArrayList;
 import java.util.List;

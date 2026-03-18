@@ -4,8 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import boutique.modele.Article;
-import boutique.modele.Panier; 
+import fr.boutique.modele.Article;
+import fr.boutique.modele.Panier; 
  
 class PanierReductionTest { 
  

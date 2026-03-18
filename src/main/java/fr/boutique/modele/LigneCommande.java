@@ -1,4 +1,4 @@
-package boutique.modele;
+package fr.boutique.modele;
 
 public record LigneCommande(Article article, int quantite) { 
     public LigneCommande { 

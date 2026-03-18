@@ -5,8 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
-import boutique.modele.Article;
-import boutique.modele.Panier; 
+import fr.boutique.modele.Article;
+import fr.boutique.modele.Panier; 
  
 class PanierTest { 
  

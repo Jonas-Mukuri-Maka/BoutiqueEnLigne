@@ -1,2 +1,3 @@
 target/
 *.LCK*
+k8s/secret.yml

@@ -1,4 +1,4 @@
-package boutique.service;
+package fr.boutique.service;
 
 public interface DepotStock { 
     int getStock(String referenceArticle); 

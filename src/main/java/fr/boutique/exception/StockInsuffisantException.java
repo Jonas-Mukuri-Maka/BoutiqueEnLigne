@@ -1,4 +1,4 @@
-package boutique.exception;
+package fr.boutique.exception;
 
 public class StockInsuffisantException extends RuntimeException { 
     public StockInsuffisantException(String message) { super(message); } 

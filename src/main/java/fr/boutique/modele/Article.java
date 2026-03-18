@@ -1,4 +1,4 @@
-package boutique.modele;
+package fr.boutique.modele;
 
 public class Article { 
     private final String reference; 

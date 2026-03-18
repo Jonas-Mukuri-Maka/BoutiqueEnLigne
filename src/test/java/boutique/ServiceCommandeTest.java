@@ -6,12 +6,12 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import boutique.exception.StockInsuffisantException;
-import boutique.modele.Article;
-import boutique.modele.Commande;
-import boutique.modele.Panier;
-import boutique.service.DepotStock;
-import boutique.service.ServiceCommande;
+import fr.boutique.modele.Article;
+import fr.boutique.modele.Commande;
+import fr.boutique.modele.Panier;
+import fr.boutique.service.DepotStock;
+import fr.boutique.service.ServiceCommande;
+import fr.boutique.exception.*;
 
 class ServiceCommandeTest { 
     private DepotStock stockDisponible = reference -> 100; 

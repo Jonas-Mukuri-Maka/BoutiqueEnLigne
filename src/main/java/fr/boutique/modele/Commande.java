@@ -1,4 +1,4 @@
-package boutique.modele;
+package fr.boutique.modele;
 
 import java.time.LocalDateTime;
 

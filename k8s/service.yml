@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: boutique-svc
+  namespace: default
+spec:
+  selector:
+    app: boutique # cible les Pods avec ce label
+  ports:
+    - protocol: TCP
+      port: 80 # port du Service (côté cluster)
+      targetPort: 8080 # port du conteneur
+  type: NodePort # accessible depuis l'extérieur du cluster
